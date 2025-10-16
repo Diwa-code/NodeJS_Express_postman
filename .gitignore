@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Environment config
+.env
+
+# Logs
+logs/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup / temp files
+*.tmp
+*.bak
+*.swp
