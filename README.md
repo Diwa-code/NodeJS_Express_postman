@@ -22,9 +22,11 @@ Aplikasi ini dapat dijalankan secara lokal dan diuji menggunakan **Postman** unt
 ## ⚙️ Persiapan Awal
 
 ### 1️⃣ Instal Node.js
+
 Pastikan Node.js sudah terinstal di komputer kamu.
 
 Cek versi:
+
 ```bash
 node -v
 npm -v
@@ -37,22 +39,21 @@ mysql – koneksi ke database MySQL
 body-parser – parsing data JSON
 nodemon – auto-restart server saat file berubah
 3️⃣ Konfigurasi Database
-Pastikan MySQL server sudah berjalan (misalnya lewat XAMPP / MySQL Workbench).
-Ubah kredensial database di file connection.js sesuai milikmu:
+Pastikan MySQL server sudah berjalan (misalnya lewat XAMPP atau MySQL Workbench).
+Ubah kredensial database di file connection.js sesuai dengan milikmu:
 host: 'localhost',
 user: 'root',
 password: '',
 database: 'nama_database_kamu'
-▶️ Menjalankan Server
+4️⃣ Menjalankan Server
 Gunakan nodemon agar server otomatis restart setiap ada perubahan kode:
 npx nodemon index.js
-Atau jalankan server normal:
+Atau jalankan server normal tanpa auto-restart:
 npm start
 Server akan berjalan di:
 👉 http://localhost:3000
 🧪 Pengujian dengan Postman
 Kamu bisa menguji API menggunakan Postman.
-Contoh Endpoint:
 🔹 Cek status server
 GET http://localhost:3000/
 Response:
@@ -68,6 +69,7 @@ Menampilkan seluruh data dari tabel users di MySQL.
   "start": "node index.js",
   "dev": "nodemon index.js"
 }
+Gunakan:
 Jalankan server normal: npm start
 Jalankan dengan nodemon: npm run dev
 📚 Dependencies
