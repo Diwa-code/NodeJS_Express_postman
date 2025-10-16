@@ -1,20 +1,31 @@
-🚀 Node.js REST API with Express and MySQL
-Proyek ini merupakan REST API sederhana menggunakan Node.js, Express, dan MySQL.
-Aplikasi ini dapat dijalankan secara lokal dan diuji menggunakan Postman untuk melakukan operasi CRUD.
-📦 Struktur Folder
+# 🚀 Node.js REST API with Express and MySQL
+
+Proyek ini merupakan REST API sederhana menggunakan **Node.js**, **Express**, dan **MySQL**.  
+Aplikasi ini dapat dijalankan secara lokal dan diuji menggunakan **Postman** untuk melakukan operasi CRUD.
+
+---
+
+## 📁 Struktur Folder
+
 .
-├── index.js             # Entry point server utama
-├── connection.js        # Konfigurasi koneksi ke MySQL
-├── response.js          # Helper untuk format response JSON
-├── models/              # Model query database (CRUD)
-├── utils/               # Helper tambahan
-├── package.json         # Dependency dan script npm
+├── index.js # Entry point server utama
+├── connection.js # Konfigurasi koneksi ke MySQL
+├── response.js # Helper untuk format response JSON
+├── models/ # Model query database (CRUD)
+├── utils/ # Helper tambahan
+├── package.json # Dependency dan script npm
 ├── package-lock.json
-└── node_modules/        # Dependensi (otomatis di-generate oleh npm)
-⚙️ Persiapan Awal
-1️⃣ Instal Node.js
+└── node_modules/ # Dependensi (otomatis di-generate oleh npm)
+
+---
+
+## ⚙️ Persiapan Awal
+
+### 1️⃣ Instal Node.js
 Pastikan Node.js sudah terinstal di komputer kamu.
-Cek versi dengan:
+
+Cek versi:
+```bash
 node -v
 npm -v
 2️⃣ Install Dependencies
@@ -23,11 +34,11 @@ npm install
 Perintah ini akan otomatis mengunduh semua library dari file package.json, termasuk:
 express – framework utama REST API
 mysql – koneksi ke database MySQL
-body-parser – untuk parsing data JSON
-nodemon – menjalankan server dengan auto-restart
+body-parser – parsing data JSON
+nodemon – auto-restart server saat file berubah
 3️⃣ Konfigurasi Database
-Pastikan MySQL server sudah berjalan (misalnya menggunakan XAMPP atau MySQL Workbench).
-Ubah kredensial database di file connection.js sesuai dengan milik kamu:
+Pastikan MySQL server sudah berjalan (misalnya lewat XAMPP / MySQL Workbench).
+Ubah kredensial database di file connection.js sesuai milikmu:
 host: 'localhost',
 user: 'root',
 password: '',
@@ -35,40 +46,39 @@ database: 'nama_database_kamu'
 ▶️ Menjalankan Server
 Gunakan nodemon agar server otomatis restart setiap ada perubahan kode:
 npx nodemon index.js
-Atau gunakan perintah npm:
+Atau jalankan server normal:
 npm start
 Server akan berjalan di:
 👉 http://localhost:3000
 🧪 Pengujian dengan Postman
-Kamu bisa menguji API menggunakan Postman dengan langkah berikut:
-Buka aplikasi Postman.
-Coba endpoint utama untuk memastikan server berjalan:
+Kamu bisa menguji API menggunakan Postman.
+Contoh Endpoint:
+🔹 Cek status server
 GET http://localhost:3000/
-Harus menampilkan respon seperti:
+Response:
 {
   "status": 200,
   "message": "Server running successfully"
 }
-Contoh endpoint lain:
+🔹 Ambil semua user
 GET http://localhost:3000/users
-➜ Menampilkan seluruh data dari tabel users di MySQL.
-📚 Script yang Tersedia
+Menampilkan seluruh data dari tabel users di MySQL.
+📜 Script NPM
 "scripts": {
   "start": "node index.js",
   "dev": "nodemon index.js"
 }
-Kamu bisa menggunakan:
-npm start → Menjalankan server normal
-npm run dev → Menjalankan server dengan nodemon
-🧰 Dependencies
+Jalankan server normal: npm start
+Jalankan dengan nodemon: npm run dev
+📚 Dependencies
 Package	Fungsi
-express	Framework utama untuk REST API
-mysql	Menjalankan koneksi dan query database
+express	Framework utama REST API
+mysql	Menjalankan koneksi & query database
 body-parser	Parsing data JSON dari request
 nodemon	Auto-restart server saat file berubah
-🧭 Alur Singkat Penggunaan
+🧭 Langkah Singkat Penggunaan
 Langkah	Perintah
-Instal dependency	npm install
+Install dependency	npm install
 Jalankan server	npm start
 Jalankan dengan nodemon	npx nodemon index.js
 Uji API di Postman	GET http://localhost:3000/
